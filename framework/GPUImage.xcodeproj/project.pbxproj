@@ -21,6 +21,8 @@
 		1F5FA94424C022720010E540 /* HarrisCornerDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FA93924C022720010E540 /* HarrisCornerDetector.swift */; };
 		1F5FA94524C022720010E540 /* NobleCornerDetector.metal in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FA93A24C022720010E540 /* NobleCornerDetector.metal */; };
 		1F5FA94624C022720010E540 /* NobleCornerDetector.metal in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FA93A24C022720010E540 /* NobleCornerDetector.metal */; };
+		1F5FA95324C16AEB0010E540 /* Histogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FA95224C16AEB0010E540 /* Histogram.swift */; };
+		1F5FA95424C16AEB0010E540 /* Histogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FA95224C16AEB0010E540 /* Histogram.swift */; };
 		1F89E69B24BC36D200105582 /* WhiteBalance.metal in Sources */ = {isa = PBXBuildFile; fileRef = 79A81C9C2101016100A3B43A /* WhiteBalance.metal */; };
 		1F89E69C24BC36D300105582 /* WhiteBalance.metal in Sources */ = {isa = PBXBuildFile; fileRef = 79A81C9C2101016100A3B43A /* WhiteBalance.metal */; };
 		1F89E69D24BD035C00105582 /* WhiteBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A81C992101015700A3B43A /* WhiteBalance.swift */; };
@@ -437,6 +439,7 @@
 		1F5FA93824C022720010E540 /* HarrisCornerDetector.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = HarrisCornerDetector.metal; path = Source/Operations/HarrisCornerDetector.metal; sourceTree = "<group>"; };
 		1F5FA93924C022720010E540 /* HarrisCornerDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HarrisCornerDetector.swift; path = Source/Operations/HarrisCornerDetector.swift; sourceTree = "<group>"; };
 		1F5FA93A24C022720010E540 /* NobleCornerDetector.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = NobleCornerDetector.metal; path = Source/Operations/NobleCornerDetector.metal; sourceTree = "<group>"; };
+		1F5FA95224C16AEB0010E540 /* Histogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Histogram.swift; path = Source/Operations/Histogram.swift; sourceTree = "<group>"; };
 		1FE9A81B24BC0B7C00BBCDCA /* MovieInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieInput.swift; path = Source/MovieInput.swift; sourceTree = "<group>"; };
 		1FE9A81E24BC0B8300BBCDCA /* MovieOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieOutput.swift; path = Source/MovieOutput.swift; sourceTree = "<group>"; };
 		4C280F75213426D6001A985C /* Posterize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Posterize.swift; path = Source/Operations/Posterize.swift; sourceTree = "<group>"; };
@@ -792,6 +795,7 @@
 				BCC6AB68210E62EB00F9803A /* Convolution3x3.swift */,
 				BCC6AB6B210E635B00F9803A /* Convolution3x3.metal */,
 				BCA0C1F522BD5DFD000F3F74 /* GaussianBlur.swift */,
+				1F5FA95224C16AEB0010E540 /* Histogram.swift */,
 				BC25F8AC22C2B3F600CBBD15 /* HighPassFilter.swift */,
 				BC25F8A822C2B30A00CBBD15 /* ImageBuffer.swift */,
 				795ECAB921EF91FF000EF927 /* Laplacian.swift */,
@@ -1165,6 +1169,7 @@
 				7B25C0E32103D328000EC621 /* AlphaBlend.swift in Sources */,
 				795ECAB421EF8ECA000EF927 /* ChromaKey.swift in Sources */,
 				793D933820F68C70008A7A6E /* ContrastAdjustment.metal in Sources */,
+				1F5FA95324C16AEB0010E540 /* Histogram.swift in Sources */,
 				79A81CA021010A2200A3B43A /* Vibrance.swift in Sources */,
 				4C280F76213426D6001A985C /* Posterize.swift in Sources */,
 				79CB6E112109311C0042F87B /* MultiplyBlend.metal in Sources */,
@@ -1379,6 +1384,7 @@
 				7B25C0E42103D328000EC621 /* AlphaBlend.swift in Sources */,
 				795ECAB521EF8ECA000EF927 /* ChromaKey.swift in Sources */,
 				793D934B20F69A89008A7A6E /* HueAdjustment.metal in Sources */,
+				1F5FA95424C16AEB0010E540 /* Histogram.swift in Sources */,
 				79A81CA121010A2200A3B43A /* Vibrance.swift in Sources */,
 				4C280F77213426D6001A985C /* Posterize.swift in Sources */,
 				79CB6E122109311C0042F87B /* MultiplyBlend.metal in Sources */,

@@ -295,26 +295,26 @@ let filterOperations: Array<FilterOperationInterface> = [
         sliderUpdateCallback:nil,
         filterOperationType:.singleInput
     ),
-//    FilterOperation(
-//        filter:{Histogram(type:.rgb)},
-//        listName:"Histogram",
-//        titleName:"Histogram",
-//        sliderConfiguration:.enabled(minimumValue:4.0, maximumValue:32.0, initialValue:16.0),
-//        sliderUpdateCallback: {(filter, sliderValue) in
-//            filter.downsamplingFactor = UInt(round(sliderValue))
-//        },
-//        filterOperationType:.custom(filterSetupFunction: {(camera, filter, outputView) in
-//            let castFilter = filter as! Histogram
-//            let histogramGraph = HistogramDisplay()
-//            histogramGraph.overriddenOutputSize = Size(width:256.0, height:330.0)
-//            let blendFilter = AlphaBlend()
-//            blendFilter.mix = 0.75
-//            camera --> blendFilter
-//            camera --> castFilter --> histogramGraph --> blendFilter --> outputView
-//            
-//            return blendFilter
-//        })
-//    ),
+    FilterOperation(
+        filter:{Histogram()},
+        listName:"Histogram",
+        titleName:"Histogram",
+        sliderConfiguration:.enabled(minimumValue:4.0, maximumValue:32.0, initialValue:16.0),
+        sliderUpdateCallback: {(filter, sliderValue) in
+           // filter.downsamplingFactor = UInt(round(sliderValue))
+        },
+        filterOperationType:.custom(filterSetupFunction: {(camera, filter, outputView) in
+            let castFilter = filter as! Histogram
+            //let histogramGraph = HistogramDisplay()
+            //histogramGraph.overriddenOutputSize = Size(width:256.0, height:330.0)
+            let blendFilter = AlphaBlend()
+            blendFilter.mix = 0.75
+            camera --> castFilter --> outputView
+            //camera --> castFilter --> blendFilter --> outputView
+            
+            return blendFilter
+        })
+    ),
 //    FilterOperation (
 //        filter:{HistogramEqualization(type:.rgb)},
 //        listName:"Histogram equalization",
