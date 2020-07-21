@@ -12,7 +12,7 @@ public class BoxBlur: BasicOperation {
                 let kernelSize = roundToOdd(blurRadiusInPixels) // MPS box blur kernels need to be odd
                 internalMPSImageBox = MPSImageBox(device: sharedMetalRenderingDevice.device, kernelWidth: kernelSize, kernelHeight: kernelSize)
             } else {
-                fatalError("Box blur not yet implemented on pre-MPS OS versions")
+                //fatalError("Box blur not yet implemented on pre-MPS OS versions")
 //                uniformSettings["convolutionKernel"] = convolutionKernel
             }
         }
@@ -26,10 +26,11 @@ public class BoxBlur: BasicOperation {
         
         ({blurRadiusInPixels = 2.0})()
         
-        if #available(iOS 9, macOS 10.13, *) {
+        if sharedMetalRenderingDevice.metalPerformanceShadersAreSupported,
+            #available(iOS 9, macOS 10.13, *) {
             self.metalPerformanceShaderPathway = usingMPSImageBox
         } else {
-            fatalError("Box blur not yet implemented on pre-MPS OS versions")
+            Log.warning("Box blur is not yet supported on the Simulator.")
         }
     }
     

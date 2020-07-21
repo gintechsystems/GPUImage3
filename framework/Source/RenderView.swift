@@ -29,7 +29,7 @@ public class RenderView: MTKView, ImageConsumer {
     
     private func commonInit() {
         framebufferOnly = false
-        autoResizeDrawable = false
+        autoResizeDrawable = true // Not sure why but this is necessary for simulator
         
         self.device = sharedMetalRenderingDevice.device
         
