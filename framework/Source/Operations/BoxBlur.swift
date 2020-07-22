@@ -30,7 +30,7 @@ public class BoxBlur: BasicOperation {
             #available(iOS 9, macOS 10.13, *) {
             self.metalPerformanceShaderPathway = usingMPSImageBox
         } else {
-            Log.warning("Box blur is not yet supported on the Simulator.")
+            Log.warning("The Metal Performance Shader Box Blur is not yet supported on this device.")
         }
     }
     

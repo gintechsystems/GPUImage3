@@ -26,7 +26,7 @@ public class GaussianBlur: BasicOperation {
             #available(iOS 9, macOS 10.13, *) {
             self.metalPerformanceShaderPathway = usingMPSImageGaussianBlur
         } else {
-            Log.warning("Gaussian blur is not yet supported on the Simulator.")
+            Log.warning("The Metal Performance Shader Gaussian Blur is not yet supported on this device.")
         }
     }
     
