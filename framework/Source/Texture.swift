@@ -31,7 +31,6 @@ public class Texture {
     public var userInfo:[AnyHashable:Any]?
     
     public let texture: MTLTexture
-    public var lastCommandBuffer: MTLCommandBuffer?
     
     public init(orientation: ImageOrientation, texture: MTLTexture, timingStyle: TextureTimingStyle  = .stillImage) {
         self.orientation = orientation

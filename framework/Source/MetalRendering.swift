@@ -24,8 +24,6 @@ extension MTLCommandBuffer {
 //        renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 0)
 
         renderEncoder.endEncoding()
-        
-        outputTexture.lastCommandBuffer = self
     }
     
     public func renderQuad(pipelineState:MTLRenderPipelineState, uniformSettings:ShaderUniformSettings? = nil, inputTextures:[UInt:Texture], useNormalizedTextureCoordinates:Bool = true, imageVertices:[Float] = standardImageVertices, outputTexture:Texture, outputOrientation:ImageOrientation = .portrait) {
@@ -64,8 +62,6 @@ extension MTLCommandBuffer {
         uniformSettings?.restoreShaderSettings(renderEncoder: renderEncoder, vertexBufferIndex: 1 + inputTextures.count)
         renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
         renderEncoder.endEncoding()
-        
-        outputTexture.lastCommandBuffer = self
     }
 }
 
