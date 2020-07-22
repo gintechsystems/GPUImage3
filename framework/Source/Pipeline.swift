@@ -192,9 +192,8 @@ public class ImageRelay: ImageProcessingOperation {
     
     public private(set) var userInfo:[AnyHashable:Any]? {
         get {
-            let aUserInfo:[AnyHashable:Any]?
             _userInfoLock.lock()
-            aUserInfo = _userInfo
+            let aUserInfo = _userInfo
             _userInfoLock.unlock()
             return aUserInfo
         }
