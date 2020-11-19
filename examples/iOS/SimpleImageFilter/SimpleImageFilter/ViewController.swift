@@ -14,9 +14,9 @@ class ViewController: UIViewController {
         // Filtering image for saving
         let testImage = UIImage(named:"WID-small.jpg")!
         let toonFilter = ToonFilter()
-        let filteredImage = testImage.filterWithOperation(toonFilter)
+        let filteredImage = try! testImage.filterWithOperation(toonFilter)!
         
-        let pngImage = UIImagePNGRepresentation(filteredImage)!
+        let pngImage = filteredImage.pngData()!
         do {
             let documentsDir = try FileManager.default.url(for:.documentDirectory, in:.userDomainMask, appropriateFor:nil, create:true)
             let fileURL = URL(string:"test.png", relativeTo:documentsDir)!
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         }
         
         // Filtering image for display
-        picture = PictureInput(image:UIImage(named:"WID-small.jpg")!)
+        picture = try! PictureInput(image:UIImage(named:"WID-small.jpg")!)
         filter = SaturationAdjustment()
         picture --> filter --> renderView
         picture.processImage()
