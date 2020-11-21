@@ -30,10 +30,20 @@ public class HarrisCornerDetector: OperationGroup {
     let gaussianBlur = GaussianBlur()
     var harrisCornerDetector : TextureSamplingOperation//(fragmentFunctionName : "harrisCornerDetector")
     let nonMaximumSuppression = TextureSamplingOperation(fragmentFunctionName: "nonMaxSuppression")
-
-    public init(fragmentShaderFunction :String = "harrisCornerDetector") {
+    
+    public override init() {
+        self.harrisCornerDetector = TextureSamplingOperation(fragmentFunctionName: "harrisCornerDetector")
+        super.init()
+        self.commonInit()
+    }
+    
+    public init(fragmentShaderFunction: String) {
         self.harrisCornerDetector = TextureSamplingOperation(fragmentFunctionName : fragmentShaderFunction)
         super.init()
+        self.commonInit()
+    }
+    
+    private func commonInit() {
         ({blurRadiusInPixels = 2.0})()
         ({sensitivity = 5.0})()
         ({threshold = 0.2})()

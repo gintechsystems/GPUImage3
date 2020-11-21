@@ -7,7 +7,7 @@
 //
 
 public class NobleCornerDetector: HarrisCornerDetector {
-    public init() {
+    public override init() {
         super.init(fragmentShaderFunction: "nobleCornerDetector")
     }
 }
